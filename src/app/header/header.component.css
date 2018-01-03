@@ -1,0 +1,46 @@
+nav {
+    padding: 15px 35px 15px 35px;
+    overflow: hidden;
+
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    height: inherit;
+}
+
+div.logo {
+    float: left;
+    font-size: 45px;
+    color: #D8D8D8;
+    text-shadow: 2px 2px #000;
+}
+
+ul {
+    padding: 0;
+    list-style-type: none;
+    margin-left: auto;
+    text-align: center;
+}
+
+ul li {
+    display: inline-block;
+    font-weight: normal;
+    font-size: 17px;
+}
+
+ul li a {
+    color: #F57C17;
+    text-decoration: none;
+    padding: 0px 20px 0px 20px;
+}
+
+a.button {
+    color: #F3F5F4 !important;
+    padding: 10px !important;
+    margin-left: 10px;
+}
+
+.horizontal-rule {
+    border-top: 1px solid #D8D8D8;
+}

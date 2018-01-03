@@ -1,0 +1,18 @@
+main {
+    /* expand element to fill remaining space and push footer to bottom */
+    flex: 1 0 auto;
+}
+
+footer {
+    /* prevent Chrome, Opera, and Safari from letting these items shrink to smaller than their content's default minimum size */
+    flex-shrink: 0;
+    text-align: center;
+    font-size: 11px;
+    color: #D8D8D8;
+    padding :10px;
+}
+
+footer a {
+    color: #D8D8D8;
+    text-decoration: none;
+}

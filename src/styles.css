@@ -1,1 +1,67 @@
 /* You can add global styles to this file, and also import other style files */
+
+html {
+    height: 100%;
+
+    /* preventing scrollbars */
+    overflow-x: hidden;
+    margin-right: calc(100% - 100vw);
+}
+
+body {
+    background-image: url("assets/img/background.jpg");
+    background-repeat: no-repeat;
+    background-position: center center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    background-attachment: fixed;
+
+    font-family: 'Open Sans', sans-serif;
+
+    margin: 0 !important;
+    padding: 0 !important;
+
+    /* avoid the IE 10-11 `min-height` bug */
+    height: 100vh;
+}
+
+app-root {
+    height: 100vh;
+
+    /* flexbox-layout for sticky footer */
+    display: flex;
+    flex-direction: column;
+}
+
+/*
+app-root > * {
+    padding: 10px;
+}
+*/
+
+.logo {
+    font-family: 'Pacifico', cursive;
+}
+
+.float-clear {
+    clear: both;
+}
+
+.button {
+    background-color: #F57C17;
+    border: 1px solid #F57C17;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    display: block;
+    font-family: 'Open Sans', sans-serif;
+    color: #F3F5F4;
+    text-align: center;
+    cursor: pointer;
+}
+
+.button:hover {
+    background-color: #F57C17;
+}
