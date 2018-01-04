@@ -65,3 +65,7 @@ app-root > * {
 .button:hover {
     background-color: #F57C17;
 }
+
+.button .fas {
+    margin-right: 5px;
+}
