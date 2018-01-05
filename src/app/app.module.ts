@@ -10,6 +10,8 @@ import { LoginComponent } from './login/login.component';
 
 import { AuthGuard } from './_guards/auth.guard';
 
+import {JwtInterceptor } from './_helpers/jwt.interceptor';
+
 const appRoutes: Routes = [
     {
         path: 'login',
