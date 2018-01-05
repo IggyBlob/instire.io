@@ -1,0 +1,14 @@
+.container {
+    width: 350px;
+}
+
+.button {
+    width: 100%;
+
+    font-size: 18px;
+    padding: 10px;
+}
+
+.horizontal-rule {
+    margin: 20px 0px 20px 0px;
+}

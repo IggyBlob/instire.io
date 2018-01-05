@@ -6,8 +6,13 @@ import { AppComponent } from './app.component';
 import { StartComponent } from './start/start.component';
 import { ScoreboardComponent } from './scoreboard/scoreboard.component';
 import { HeaderComponent } from './header/header.component';
+import { LoginComponent } from './login/login.component';
 
 const appRoutes: Routes = [
+    {
+        path: 'login',
+        component: LoginComponent
+    },
     {
         path: 'scoreboard',
         component: ScoreboardComponent
@@ -53,7 +58,8 @@ const appRoutes: Routes = [
         AppComponent,
         StartComponent,
         ScoreboardComponent,
-        HeaderComponent
+        HeaderComponent,
+        LoginComponent
     ],
     imports: [
         RouterModule.forRoot(

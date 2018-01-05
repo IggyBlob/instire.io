@@ -66,6 +66,16 @@ app-root > * {
     background-color: #F57C17;
 }
 
-.button .fas {
+.far, .fab {
     margin-right: 5px;
+}
+
+div.container {
+    background: rgba(204, 204, 204, 0.8);
+    border-radius: 2px;
+    padding: 20px;
+}
+
+.horizontal-rule {
+    border-top: 1px solid #D8D8D8;
 }

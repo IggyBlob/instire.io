@@ -1,6 +1,12 @@
 main {
     /* expand element to fill remaining space and push footer to bottom */
     flex: 1 0 auto;
+
+    display: flex;
+    flex-wrap: wrap;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
 }
 
 footer {

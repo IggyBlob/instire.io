@@ -35,12 +35,9 @@ ul li a {
     padding-right: 50px;
 }
 
-a.button {
+.button {
     color: #F3F5F4 !important;
     padding: 10px !important;
     margin-left: 10px;
-}
-
-.horizontal-rule {
-    border-top: 1px solid #D8D8D8;
+    font-size: 13px;
 }
