@@ -8,6 +8,8 @@ import { ScoreboardComponent } from './scoreboard/scoreboard.component';
 import { HeaderComponent } from './header/header.component';
 import { LoginComponent } from './login/login.component';
 
+import { AuthGuard } from './_guards/auth.guard';
+
 const appRoutes: Routes = [
     {
         path: 'login',
@@ -15,7 +17,8 @@ const appRoutes: Routes = [
     },
     {
         path: 'scoreboard',
-        component: ScoreboardComponent
+        component: ScoreboardComponent,
+        canActivate: [AuthGuard]
     },
     /*
     {
@@ -68,7 +71,9 @@ const appRoutes: Routes = [
         ),
         BrowserModule
     ],
-    providers: [],
+    providers: [
+        AuthGuard
+    ],
     bootstrap: [AppComponent]
 })
 export class AppModule { }
