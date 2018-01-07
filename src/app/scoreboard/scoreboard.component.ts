@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {UserService} from '../_services/user.service';
 
 @Component({
   selector: 'app-scoreboard',
@@ -7,9 +8,19 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ScoreboardComponent implements OnInit {
 
-  constructor() { }
+    loading: boolean;
 
-  ngOnInit() {
-  }
+    constructor(public userService: UserService) {
+        this.loading = true;
+    }
+
+    ngOnInit() {
+
+        this.userService.fetchUser()
+            .then(() => this.userService.fetchScore())
+            .then(() => this.loading = false);
+
+        //this.userService.fetchScore();
+    }
 
 }

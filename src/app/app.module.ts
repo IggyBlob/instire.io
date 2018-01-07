@@ -11,6 +11,8 @@ import { LoginComponent } from './login/login.component';
 import { AuthGuard } from './_guards/auth.guard';
 
 import {JwtInterceptor } from './_helpers/jwt.interceptor';
+import {UserService} from './_services/user.service';
+import {HTTP_INTERCEPTORS, HttpClientModule} from '@angular/common/http';
 
 const appRoutes: Routes = [
     {
@@ -71,10 +73,17 @@ const appRoutes: Routes = [
             appRoutes,
             { enableTracing: true } // for debugging only
         ),
-        BrowserModule
+        BrowserModule,
+        HttpClientModule
     ],
     providers: [
-        AuthGuard
+        AuthGuard,
+        UserService,
+        {
+            provide: HTTP_INTERCEPTORS,
+            useClass: JwtInterceptor,
+            multi: true
+        }
     ],
     bootstrap: [AppComponent]
 })
