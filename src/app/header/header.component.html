@@ -3,11 +3,19 @@
         instire.io
     </div>
     <ul>
-        <li><a routerLink="/scoreboard" routerLinkActive="active">About</a></li>
-        <li><a routerLink="/faq" routerLinkActive="active">FAQ</a></li>
-        <li>
+        <li *ngIf="!loginService.loggedIn"><a routerLink="/scoreboard" routerLinkActive="active">About</a></li>
+        <li *ngIf="!loginService.loggedIn"><a routerLink="/faq" routerLinkActive="active">FAQ</a></li>
+        <li *ngIf="loginService.loggedIn && userService.user.details" class="welcome-text">
+            What's up {{ userService.user.details.full_name }}, nice to see you!
+        </li>
+        <li *ngIf="!loginService.loggedIn">
             <button routerLink="/login" routerLinkActive="active" class="button">
                 <i class="far fa-arrow-alt-circle-right"></i> Check your profile
+            </button>
+        </li>
+        <li *ngIf="loginService.loggedIn">
+            <button (click)="logout()" class="button">
+                <i class="fas fa-sign-out-alt"></i> Logout
             </button>
         </li>
     </ul>

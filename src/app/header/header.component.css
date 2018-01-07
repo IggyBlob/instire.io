@@ -27,6 +27,11 @@ ul li {
     display: inline-block;
     font-weight: normal;
     font-size: 17px;
+    color: #F57C17;
+}
+
+li.welcome-text {
+    padding-right: 50px;
 }
 
 ul li a {
@@ -40,4 +45,5 @@ ul li a {
     padding: 10px !important;
     margin-left: 10px;
     font-size: 13px;
+    min-width: 100px;
 }

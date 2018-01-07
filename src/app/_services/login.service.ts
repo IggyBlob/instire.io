@@ -6,7 +6,7 @@ export class LoginService {
     loggedIn: boolean;
 
     constructor() {
-        this.loggedIn = false;
+        this.validateLoginStatus();
     }
 
     public loginRedirect() {
@@ -31,6 +31,7 @@ export class LoginService {
     public validateLoginStatus() {
         const token = localStorage.getItem('token');
         if (this.validateToken(token)) {
+            this.loggedIn = true;
             return true;
         }
         // invalid token, log out
