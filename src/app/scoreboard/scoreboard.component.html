@@ -1,3 +1,7 @@
+<div *ngIf="loading">
+
+</div>
+
 <div *ngIf="!loading">
     <img class="profile-picture" *ngIf="userService.user.details" [src]="userService.user.details.profile_picture" />
     <div class="username">
@@ -8,7 +12,7 @@
     </div>
     <div class="results" *ngIf="userService.user.score">
         <p>Your profile currently scores</p>
-        <h1>{{ userService.user.score |  number : '1.2-2' }}</h1>
+        <h1>{{ scoreCount |  number : '1.2-2' }}</h1>
         <p>That's pretty dope! Your account performs better than 24% of 2.567 fellow <span class="logo">instire.io</span> users!</p>
     </div>
 </div>
