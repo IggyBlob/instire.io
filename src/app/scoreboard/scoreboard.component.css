@@ -1,3 +1,20 @@
+/* loadingIndicator */
+img.loadingImage {
+    border-top: 20px solid #D8D8D8;
+    border-left: 20px solid #D8D8D8;
+    border-right: 20px solid #D8D8D8;
+    border-bottom: 40px solid #D8D8D8;
+    border-radius: 5px;
+    width: 200px;
+    height: 200px;
+}
+
+h1.loadingMessage {
+    color: #F3F5F4;
+    font-size: 70px;
+}
+
+/* scoreCard */
 img.profile-picture {
     border-radius: 75px;
     border: 20px solid #F3F5F4;
@@ -33,7 +50,7 @@ h2 {
     font-size: 20px;
 }
 
-h1 {
+h1.score {
     font-size: 100px;
     color: #F1431B;
     margin-top: -25px;

@@ -1,8 +1,4 @@
-<div *ngIf="loading">
-
-</div>
-
-<div *ngIf="!loading">
+<div class="scoreCard" *ngIf="displayScoreCard" [@enterAnimation]>
     <img class="profile-picture" *ngIf="userService.user.details" [src]="userService.user.details.profile_picture" />
     <div class="username">
         <h2>@{{ userService.user.details.username | uppercase }}</h2>
@@ -12,7 +8,18 @@
     </div>
     <div class="results" *ngIf="userService.user.score">
         <p>Your profile currently scores</p>
-        <h1>{{ scoreCount |  number : '1.2-2' }}</h1>
+        <h1 class="score">{{ scoreCount |  number : '1.2-2' }}</h1>
         <p>That's pretty dope! Your account performs better than 24% of 2.567 fellow <span class="logo">instire.io</span> users!</p>
     </div>
+</div>
+
+<div class="loadingIndicator" *ngIf="!displayScoreCard" [@enterAnimation]>
+    <div *ngIf="mediaFetched">
+        <img class="loadingImage"
+             [src]="currMediaImg"
+             [@imageAnimation]="stateChange"
+             (@imageAnimation.done)="nextImage()">
+    </div>
+    <img *ngIf="!mediaFetched" src="../../../assets/img/dual-ring.svg" [@enterAnimation]>
+    <h1 class="loadingMessage">{{ currMessage }}</h1>
 </div>
