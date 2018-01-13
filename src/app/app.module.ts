@@ -15,6 +15,7 @@ import {JwtInterceptor } from './_helpers/jwt.interceptor';
 import {UserService} from './_services/user.service';
 import {HTTP_INTERCEPTORS, HttpClientModule} from '@angular/common/http';
 import {LoginService} from './_services/login.service';
+import { AboutComponent } from './about/about.component';
 
 const appRoutes: Routes = [
     {
@@ -25,6 +26,10 @@ const appRoutes: Routes = [
         path: 'scoreboard',
         component: ScoreboardComponent,
         canActivate: [AuthGuard]
+    },
+    {
+        path: 'about/:subroute',
+        component: AboutComponent
     },
     /*
     {
@@ -68,7 +73,8 @@ const appRoutes: Routes = [
         StartComponent,
         ScoreboardComponent,
         HeaderComponent,
-        LoginComponent
+        LoginComponent,
+        AboutComponent
     ],
     imports: [
         RouterModule.forRoot(
