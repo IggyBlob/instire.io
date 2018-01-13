@@ -4,12 +4,58 @@
         <h2>@{{ userService.user.details.username | uppercase }}</h2>
     </div>
     <div class="belt">
-        jkfaskf saf safksdaf klsa
+        <div class="tooltip">
+            <span class="metric-name">Posted Media</span>
+            {{ userService.user.metrics.raw.media | number : '1.0' }}
+            <span class="tooltip-text">
+                The number of posts (pictures & videos) available on your Instagram profile.
+            </span>
+        </div> |
+        <div class="tooltip">
+            <span class="metric-name">Followers</span>
+            {{ userService.user.metrics.raw.followedBy | number : '1.0' }}
+            <span class="tooltip-text">
+                The number of accounts following you.
+            </span>
+        </div> |
+        <div class="tooltip">
+            <span class="metric-name">Following</span>
+            {{ userService.user.metrics.raw.following | number : '1.0' }}
+            <span class="tooltip-text">
+                The number of accounts you are following.
+            </span>
+        </div> |
+        <div class="tooltip">
+            <span class="metric-name">Activity</span>
+            {{ userService.user.metrics.compiled.activity | number : '1.2-2' }}
+            <span class="tooltip-text">
+                Describes the ratio between post likes and followers. Bigger is better.
+            </span>
+        </div> |
+        <div class="tooltip">
+            <span class="metric-name">Fame</span>
+            {{ userService.user.metrics.compiled.fame | number : '1.2-2' }}
+            <span class="tooltip-text">
+                Describes the ratio between your followers and the number of accounts you follow. Bigger is better.
+            </span>
+        </div> |
+        <div class="tooltip">
+            <span class="metric-name">Post Frequency</span>
+            {{ userService.user.metrics.compiled.postFrequency | number : '1.2-2' }}
+            <span class="tooltip-text">
+                The median time between your most recent posts. Lower is better.
+            </span>
+        </div>
     </div>
-    <div class="results" *ngIf="userService.user.score">
+    <div class="results">
         <p>Your profile currently scores</p>
-        <h1 class="score">{{ scoreCount |  number : '1.2-2' }}</h1>
-        <p>That's pretty dope! Your account performs better than 24% of 2.567 fellow <span class="logo">instire.io</span> users!</p>
+        <h1 class="score">{{ scoreCount | number : '1.2-2' }}</h1>
+        <p>
+            That's pretty dope!<br>
+            Your account performs better than
+            {{ performanceRatio | number : '1.0' }}% of {{ userService.user.metrics.compiled.usersAll | number }}
+            fellow instire.io users!
+        </p>
     </div>
 </div>
 

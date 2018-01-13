@@ -1,7 +1,7 @@
 export class User {
     details: UserDetails;
     media: UserMediaItem[];
-    score: number;
+    metrics: UserMetricsData;
 }
 
 class APIMessage {
@@ -17,8 +17,9 @@ export class UserMediaData extends APIMessage {
    media: UserMediaItem[];
 }
 
-export class UserScoreData extends APIMessage {
-    score: number;
+export class UserMetricsData extends APIMessage {
+    raw: RawMetrics;
+    compiled: CompiledMetrics;
 }
 
 export class AverageData extends APIMessage {
@@ -38,6 +39,21 @@ class UserMediaItem {
     likes: number;
     comments: number;
     cteatedAt: number;
+}
+
+class RawMetrics {
+    media: number;
+    followedBy: number;
+    following: number;
+}
+
+class CompiledMetrics {
+    usersAll: number;
+    usersLower: number;
+    activity: number;
+    fame: number;
+    postFrequency: number;
+    score: number;
 }
 
 

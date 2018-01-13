@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
-import {HttpClient} from '@angular/common/http';
-import {AverageData, User, UserData, UserMediaData, UserScoreData} from '../_models/user';
+import { HttpClient } from '@angular/common/http';
+import { AverageData, User, UserData, UserMediaData, UserMetricsData } from '../_models/user';
 
 @Injectable()
 export class UserService {
@@ -12,6 +12,7 @@ export class UserService {
 
     constructor(private http: HttpClient) {
         this.user = new User;
+        this.user.metrics = new UserMetricsData;
     }
 
     public fetchUser() {
@@ -21,7 +22,6 @@ export class UserService {
                 .then(
                     res => {
                     this.user.details = res.user;
-                    console.log(this.user);
                     resolve();
                 }, err => {
                     reject(err);
@@ -47,11 +47,13 @@ export class UserService {
 
     public fetchScore() {
         const promise = new Promise((resolve, reject) => {
-            this.http.get<UserScoreData>(`${this.apiUrl}/user/score`)
+            this.http.get<UserMetricsData>(`${this.apiUrl}/user/score`)
                 .toPromise()
                 .then(
                     res => {
-                        this.user.score = res.score;
+                        console.log(res.raw);
+                        this.user.metrics.raw = res.raw;
+                        this.user.metrics.compiled = res.compiled;
                         resolve();
                     }, err => {
                         reject(err);

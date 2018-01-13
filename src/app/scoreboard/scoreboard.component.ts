@@ -26,7 +26,8 @@ import {style, trigger, state, transition, animate, query, stagger, keyframes} f
                     style({transform: 'rotateZ(360deg) rotateY(90deg)',    offset: 1.0})
                 ]))
             ]
-        )])]
+        )])
+    ]
 })
 export class ScoreboardComponent implements OnInit {
 
@@ -42,6 +43,7 @@ export class ScoreboardComponent implements OnInit {
     displayScoreCard: boolean;
     scoreFetched: boolean;
     scoreCount: number;
+    performanceRatio: number;
 
 
     constructor(public userService: UserService) {
@@ -56,6 +58,7 @@ export class ScoreboardComponent implements OnInit {
         this.displayScoreCard = false;
         this.scoreFetched = false;
         this.scoreCount = 0.0;
+        this.performanceRatio = 0.0;
     }
 
     ngOnInit() {
@@ -70,7 +73,14 @@ export class ScoreboardComponent implements OnInit {
                 }
             })
             .then(() => this.userService.fetchScore())
-            .then(() => this.scoreFetched = true);
+            .then(() => {
+                this.scoreFetched = true;
+                if (this.userService.user.metrics.compiled.usersAll !== 0) {
+                    this.performanceRatio =
+                        this.userService.user.metrics.compiled.usersLower /
+                        this.userService.user.metrics.compiled.usersAll * 100;
+                }
+            });
     }
 
     public nextImage() {
@@ -103,9 +113,9 @@ export class ScoreboardComponent implements OnInit {
     private animateCountUp() {
         const interval = setInterval(() => {
             this.scoreCount += 0.11;
-            if (this.scoreCount > this.userService.user.score) {
+            if (this.scoreCount > this.userService.user.metrics.compiled.score) {
                 clearInterval(interval);
-                this.scoreCount = this.userService.user.score;
+                this.scoreCount = this.userService.user.metrics.compiled.score;
             }
         }, 20);
     }
