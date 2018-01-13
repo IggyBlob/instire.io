@@ -6,9 +6,19 @@
     width: 100%;
 
     font-size: 18px;
-    padding: 10px;
+    padding: 20px;
 }
 
 .horizontal-rule {
     margin: 20px 0px 20px 0px;
+    border-top: 1px solid #555;
+}
+
+p.privacy-info {
+    font-size: smaller;
+}
+
+p.privacy-info a {
+    text-decoration: none;
+    color: #494949;
 }

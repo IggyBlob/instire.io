@@ -63,7 +63,7 @@ app-root > * {
 }
 
 .button:hover {
-    background-color: #F57C17;
+    background-color: #e17c16;
 }
 
 .far, .fab {
@@ -71,7 +71,7 @@ app-root > * {
 }
 
 div.container {
-    background: rgba(204, 204, 204, 0.8);
+    background: rgba(204, 204, 204, 0.9);
     border-radius: 2px;
     padding: 20px;
 }
