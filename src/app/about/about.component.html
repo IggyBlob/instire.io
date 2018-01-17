@@ -1,15 +1,263 @@
+<!-- WTF -->
 <div class="container" *ngIf="subroute == 'wtf'">
-    WTF (About)
+    <h1>About <span class="logo">instire.io</span></h1>
+    <p>instire.io is an easy and convenient way to get smart insights on the performance of your Instagram profile.</p>
+    <p>
+        Unlike many other account performance analysis tools available on the Interwebs, instire.io does not confuse
+        you by displaying tons of different values, ratios and charts, but compiles one distinct, descriptive score that
+        can be shared and compared with your friends.
+    </p>
+    <p>This web application has been created by Paul Haunschmied
+        (<a href="http://paulhaunschmied.com/" title="paulhaunschmied.com" target="_blank">www.paulhaunschmied.com</a>)
+        as part of the Web Design and Web Programming class during winter semester 2017/2018 at University Of Applied
+        Sciences Upper Austria, Campus Hagenberg.
+    </p>
+    <p class="small">
+        instire.io is not affiliated with Instagram, LLC or Facebook, Inc in any way and uses the official Instagram API
+        to retrieve account data from Instagram.
+    </p>
 </div>
 
+<!-- FAQ -->
 <div class="container" *ngIf="subroute == 'faq'">
-    FAQ
+    <h1>Frequently Asked Questions</h1>
+
+    <h3>What can I do with instire.io?</h3>
+    <p>
+        instire.io is an easy and convenient way to get smart insights on the performance of your Instagram profile.
+        Find out more about instire.io in our <a routerLink="/about/wtf" routerLinkActive="active">About section</a>.
+    </p>
+
+    <h3>Why do I need to log in using my Instagram account?</h3>
+    <p>
+        In order to tell instire.io which profile to process, you need to log in via Instagram. By doing so, you
+        furthermore grant instire.io permission to read your profile data and compile metrics on top of that data.
+        Please note that instire.io is not and will never be able to perform actions on your behalf using your Instagram
+        account, which means that you only grant read-only access to your profile and therefore instire.io cannot like,
+        comment, post, delete, etc. any content using your profile.
+        Find out more about the data we store about you in our
+        <a routerLink="/about/wtf" routerLinkActive="active">Privacy Policy</a>.
+    </p>
+
+    <h3>Can instire.io read my account password?</h3>
+    <p>
+        No. Upon login, you are redirected to the Instagram login page where you enter your Instagram user name and
+        password. That login page is operated by Instagram, therefore you enter your credentials directly at the
+        Instagram website without instire.io being able to read your passwords. After successfully logging in, you are
+        redirected back to instire.io with a token issued by Instagram that grants us read-only access to your profile.
+    </p>
+
+    <h3>Do you sell my data?</h3>
+    <p>
+        No. instire.io is completely free, we do not display advertisements on our web pages and - of course - we do not
+        sell any of your data to third parties. All your Instagram content belongs to you and we only save your overall
+        score and your username for statistical purposes, but will never publicly display your username/score.
+    </p>
+
 </div>
 
+<!-- Privacy -->
 <div class="container" *ngIf="subroute == 'privacy'">
-    Privacy
+    <h1>Privacy Policy</h1>
+
+    <h3>Instagram Permissions</h3>
+    <p>
+        instire.io uses the official Instagram API to retrieve profile data from Instagram. In order to tell instire.io
+        which profile to crawl and to grant us permissions to read data of that profile, you need to log in
+        with your Instagram account.
+    </p>
+    <p>
+        instire.io does not handle any of the login procedures itself. You are simply redirected to the official
+        Instagram login page where you enter your credentials, and since that login page is directly operated by
+        Instagram, there's no way for instire.io to read any of your passwords. After a successful login, Instagram
+        sends back a token to instire.io, which, in turn, allows us to query the Instagram API (more specific, your
+        profile) on your behalf.
+    </p>
+
+    <table class="permissions">
+        <thead>
+            <tr>
+                <th colspan="2" class="table-heading">After logging in, instire.io is</th>
+            </tr>
+            <tr>
+                <th class="table-heading-green">able to</th>
+                <th class="table-heading-red">not able to</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>
+                    <ul class="fa-ul">
+                        <li>
+                            <span class="fa-li"><i class="fas fa-check-circle"></i></span>
+                            read your Instagram profile picture and account ID.
+                        </li>
+                        <li>
+                            <span class="fa-li"><i class="fas fa-check-circle"></i></span>
+                            read your Instagram user name, your full name, your bio and your website.
+                        </li>
+                        <li>
+                            <span class="fa-li"><i class="fas fa-check-circle"></i></span>
+                            read the number of posted media, the number of followers and the number of profiles you
+                            follow.
+                        </li>
+                        <li>
+                            <span class="fa-li"><i class="fas fa-check-circle"></i></span>
+                            read the 20 most recent media (images and videos) posted by you, including the number of
+                            likes and comments on a post, the time created, the filters you used, the hashtags you provided,
+                            the location associated to the image or video, and the users you tagged in the image or video.
+                        </li>
+                    </ul>
+                </td>
+                <td>
+                    <ul class="fa-ul">
+                        <li>
+                            <span class="fa-li"><i class="fas fa-times-circle"></i></span>
+                            like, comment or tag any post on Instagram on your behalf.
+                        </li>
+                        <li>
+                            <span class="fa-li"><i class="fas fa-times-circle"></i></span>
+                            follow or unfollow accounts on your behalf.
+                        </li>
+                        <li>
+                            <span class="fa-li"><i class="fas fa-times-circle"></i></span>
+                            send or read direct messages in your name.
+                        </li>
+                        <li>
+                            <span class="fa-li"><i class="fas fa-times-circle"></i></span>
+                            post any content on your behalf.
+                        </li>
+                        <li>
+                            <span class="fa-li"><i class="fas fa-times-circle"></i></span>
+                            view, like, comment or create an Instagram Story on your behalf.
+                        </li>
+                        <li>
+                            <span class="fa-li"><i class="fas fa-times-circle"></i></span>
+                            change any of your profile settings.
+                        </li>
+                        <li>
+                            <span class="fa-li"><i class="fas fa-times-circle"></i></span>
+                            retrieve data and calculate a score of any profile other than yours.
+                        </li>
+                    </ul>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+
+    <h3>Data stored by instire.io</h3>
+    <p>
+        instire.io saves your Instagram user name, your Instagram account ID and your score for statistical purposes
+        every time you log in. Your Instagram account ID is stored using encryption, so nobody will be able to read it in
+        the unlikely event of your systems being corrupted by a third party.
+    </p>
+    <p>
+        Your user name and score will never be displayed publicly and helps other users to get a feeling on how well
+        their profile is performing, relative to previous instire.io users.
+    </p>
+
+    <h3>Google Analytics</h3>
+    <p>This website uses Google Analytics, a web analytics service provided by Google, Inc. (“Google”). Google Analytics
+        uses “cookies”, which are text files placed on your computer, to help the website analyze how users use the
+        site. The information generated by the cookie about your use of the website (including your IP address) will be
+        transmitted to and stored by Google on servers in the United States. In case of activation of the IP
+        anonymization, Google will truncate/anonymize the last octet of the IP address for Member States of the
+        European Union as well as for other parties to the Agreement on the European Economic Area. Only in exceptional
+        cases, the full IP address is sent to and shortened by Google servers in the USA. On behalf of the website
+        provider Google will use this information for the purpose of evaluating your use of the website, compiling
+        reports on website activity for website operators and providing other services relating to website activity and
+        internet usage to the website provider. Google will not associate your IP address with any other data held by
+        Google. You may refuse the use of cookies by selecting the appropriate settings on your browser. However, please
+         note that if you do this, you may not be able to use the full functionality of this website. Furthermore you
+        can prevent Google’s collection and use of data (cookies and IP address) by downloading and installing the
+        browser plug-in available under https://tools.google.com/dlpage/gaoptout?hl=en-GB.
+    </p>
+    <p>
+        You can refuse the use of Google Analytics by clicking on the following link. An opt-out cookie will be set on
+        the computer, which prevents the future collection of your data when visiting this website:
+        <a (click)="gaOptOut()">Disable Google Analytics</a>
+    </p>
+    <p>
+        Further information concerning the terms and conditions of use and data privacy can be found at
+        http://www.google.com/analytics/terms/gb.html or at https://www.google.de/intl/en_uk/policies/. Please note that
+         on this website, Google Analytics code is supplemented by “anonymizeIp” to ensure an anonymized collection of
+        IP addresses (so called IP-masking).
+    </p>
 </div>
 
-<div class="container" *ngIf="subroute == 'imprint'">
-    Imprint
+<!-- Legal -->
+<div class="container legal" *ngIf="subroute == 'legal'">
+    <h1 class="center">Legal Information</h1>
+    <h3>Creator & Maintainer</h3>
+    <p class="center">
+        Paul Igor Haunschmied<br>
+        Softwarepark 23<br>
+        A-4232 Hagenberg i. M.<br><br>
+        inbox [at] paulhaunschmied.com<br>
+        <a href="http://paulhaunschmied.com/" title="paulhaunschmied.com" target="_blank">www.paulhaunschmied.com</a>
+    </p>
+    <h3>Third-party libraries and content</h3>
+    <p>
+        instire.io uses numerous libraries developed by external developers as well as content that has been produced
+        by third parties. Please note that the following authors and developers not necessarily share the opinions
+        expressed by instire.io.
+    </p>
+    <h4>Media and content</h4>
+    <ul>
+        <li>Background image: <i>Collection of Gray Scale Photos</i> by Fancycrave /
+            <a href="https://www.pexels.com/photo/collection-of-gray-scale-photos-699782/"
+               title="pexels.com" target="_blank">
+                www.pexels.com
+            </a>
+        </li>
+        <li>Instagram profile pictures and other media is the property of the respective Instagram user.</li>
+
+    </ul>
+    <h4>Libraries</h4>
+    <ul>
+        <li>Font Awesome /
+            <a href="https://fontawesome.com" title="fontawesome.com" target="_blank">
+                www.fontawesome.com
+            </a>
+        </li>
+        <li>Express &mdash; Fast, unopinionated, minimalist web framework for Node.js
+            /
+            <a href="http://expressjs.com" title="expressjs.com" target="_blank">
+                www.expessjs.com
+            </a>
+        </li>
+        <li>mysql &mdash; A pure node.js JavaScript Client implementing the MySql protocol /
+            <a href="https://github.com/mysqljs/mysql" title="github.com/mysqljs/mysql"
+               target="_blank">
+                www.github.com/mysqljs/mysql
+            </a>
+        </li>
+        <li>Bodyparser &mdash; Node.js body parsing middleware /
+            <a href="https://github.com/expressjs/body-parser" title="github.com/expressjs/body-parser" target="_blank">
+                www.github.com/expressjs/body-parser
+            </a>
+        </li>
+        <li>CORS &mdash; Node.js CORS middleware /
+            <a href="https://github.com/expressjs/cors" title="github.com/expressjs/cors" target="_blank">
+                www.github.com/expressjs/cors
+            </a>
+        </li>
+        <li>Bluebird &mdash; A full featured promise library with unmatched performance /
+            <a href="http://bluebirdjs.com" title="bluebirdjs.com" target="_blank">
+                wwww.bluebirdjs.com
+            </a>
+        </li>
+        <li>Json Web Tokens &mdash; JsonWebToken implementation for Node.js /
+            <a href="https://github.com/auth0/node-jsonwebtoken" title="github.com/auth0/node-jsonwebtoken"
+               target="_blank">
+                www.github.com/auth0/node-jsonwebtoken
+            </a>
+        </li>
+        <li>HTTP Request Promise &mdash; The simplified HTTP request client 'request' with Promise support /
+            <a href="https://github.com/request/request-promise" title="github.com/request/request-promise"
+               target="_blank">
+                www.github.com/request/request-promise
+            </a>
+        </li>
+    </ul>
 </div>

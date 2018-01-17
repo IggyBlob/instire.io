@@ -74,8 +74,14 @@ div.container {
     background: rgba(204, 204, 204, 0.9);
     border-radius: 2px;
     padding: 20px;
+    max-width: 1024px;
 }
 
 .horizontal-rule {
     border-top: 1px solid #D8D8D8;
+}
+
+p a, li a {
+    text-decoration: none;
+    color: #494949;
 }
