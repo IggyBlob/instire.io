@@ -23,3 +23,7 @@ p.privacy-info {
     font-size: 40px;
     margin-top: -5px;
 }
+
+#logout-image {
+    display: none;
+}

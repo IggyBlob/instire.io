@@ -17,7 +17,7 @@ export class HeaderComponent implements OnInit {
 
     public logout() {
         this.loginService.logout();
-        this.router.navigateByUrl('/login');
+        this.router.navigateByUrl('/login?target=logout');
     }
 
 }

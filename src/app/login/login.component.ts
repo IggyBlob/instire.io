@@ -9,7 +9,14 @@ import {LoginService} from '../_services/login.service';
 })
 export class LoginComponent implements OnInit {
 
-    constructor(private route: ActivatedRoute, private router: Router, private login: LoginService) { }
+    instagramLogoutURL: string;
+    isLogout: boolean;
+
+    constructor(private route: ActivatedRoute, private router: Router, private login: LoginService) {
+        // see https://stackoverflow.com/questions/10991753/instagram-api-user-logout
+        this.instagramLogoutURL = 'https://www.instagram.com/accounts/logout/';
+        this.isLogout = false;
+    }
 
     ngOnInit() {
         this.route.queryParams
@@ -17,6 +24,11 @@ export class LoginComponent implements OnInit {
                 if (typeof params.token !== 'undefined' && params.token !== '') {
                     this.login.login(params.token);
                     this.router.navigateByUrl('/scoreboard');
+                } else if (typeof params.target !== 'undefined' && params.target !== '') {
+                    switch (params.target) {
+                        case 'logout': this.isLogout = true;
+                        // add additional param handlers
+                    }
                 }
                 // add optional API error handling here
             });
