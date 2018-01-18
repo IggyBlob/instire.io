@@ -1,21 +1,42 @@
 <!-- WTF -->
 <div class="container" *ngIf="subroute == 'wtf'">
     <h1>About <span class="logo">instire.io</span></h1>
-    <p>instire.io is an easy and convenient way to get smart insights on the performance of your Instagram profile.</p>
-    <p>
-        Unlike many other account performance analysis tools available on the Interwebs, instire.io does not confuse
-        you by displaying tons of different values, ratios and charts, but compiles one distinct, descriptive score that
-        can be shared and compared with your friends.
-    </p>
-    <p>This web application has been created by Paul Haunschmied
-        (<a href="http://paulhaunschmied.com/" title="paulhaunschmied.com" target="_blank">www.paulhaunschmied.com</a>)
-        as part of the Web Design and Web Programming class during winter semester 2017/2018 at University Of Applied
-        Sciences Upper Austria, Campus Hagenberg.
-    </p>
-    <p class="small">
-        instire.io is not affiliated with Instagram, LLC or Facebook, Inc in any way and uses the official Instagram API
-        to retrieve account data from Instagram.
-    </p>
+    <div class="flex-wrapper">
+        <div class="wtf-text">
+            <p>
+                instire.io is an easy and convenient way to get smart insights on the performance of your Instagram
+                profile.
+            </p>
+            <p>
+                Unlike many other account performance analysis tools available on the Interwebs, instire.io does not
+                confuse you by displaying tons of different values, ratios and charts, but compiles one distinct,
+                descriptive score that can be shared and compared with your friends.
+            </p>
+            <p>This web application has been created by Paul Haunschmied
+                (<a href="http://paulhaunschmied.com/" title="paulhaunschmied.com" target="_blank">
+                    www.paulhaunschmied.com
+                </a>)
+                as part of the Web Design and Web Programming class during winter semester 2017/2018 at University Of
+                Applied Sciences Upper Austria, Campus Hagenberg.
+            </p>
+            <p class="small">
+                Please note that instire.io is not affiliated with Instagram, LLC or Facebook, Inc in any way and uses
+                the official Instagram API to retrieve account data from Instagram.
+            </p>
+        </div>
+        <div class="wtf-sidebar">
+            <div class="logo">instire.io</div>
+            <p class="center small">Copyright &copy; 2018 Paul Haunschmied.<br>All rights reserved.</p>
+            <p class="center small">Created with <i class="fas fa-heart"></i>, <i class="fas fa-beer"></i> and
+                <i class="fab fa-angular"></i>.
+            </p>
+            <p class="center small">
+                <a href="http://paulhaunschmied.com/" title="paulhaunschmied.com" target="_blank">
+                    www.paulhaunschmied.com
+                </a>
+            </p>
+        </div>
+    </div>
 </div>
 
 <!-- FAQ -->
@@ -104,8 +125,9 @@
                         <li>
                             <span class="fa-li"><i class="fas fa-check-circle"></i></span>
                             read the 20 most recent media (images and videos) posted by you, including the number of
-                            likes and comments on a post, the time created, the filters you used, the hashtags you provided,
-                            the location associated to the image or video, and the users you tagged in the image or video.
+                            likes and comments on a post, the time created, the filters you used, the hashtags you
+                            provided, the location associated to the image or video, and the users you tagged in the
+                            image or video.
                         </li>
                     </ul>
                 </td>

@@ -45,6 +45,19 @@ app-root > * {
     font-family: 'Pacifico', cursive;
 }
 
+.logo a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.float-left {
+    float: left;
+}
+
+.float-right {
+    float: right;
+}
+
 .float-clear {
     clear: both;
 }
@@ -81,7 +94,7 @@ div.container {
     border-top: 1px solid #D8D8D8;
 }
 
-p a, li a {
+p a, li a, a {
     text-decoration: none;
     color: #494949;
 }

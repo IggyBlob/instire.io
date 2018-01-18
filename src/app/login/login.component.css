@@ -17,3 +17,9 @@
 p.privacy-info {
     font-size: smaller;
 }
+
+.logo {
+    display: inline-block;
+    font-size: 40px;
+    margin-top: -5px;
+}
