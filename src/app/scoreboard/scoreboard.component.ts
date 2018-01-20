@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { UserService } from '../_services/user.service';
 import {style, trigger, state, transition, animate, query, stagger, keyframes} from '@angular/animations';
+import {Title} from '@angular/platform-browser';
 
 @Component({
     selector: 'app-scoreboard',
@@ -46,7 +47,7 @@ export class ScoreboardComponent implements OnInit {
     performanceRatio: number;
 
 
-    constructor(public userService: UserService) {
+    constructor(public userService: UserService, private titleService: Title) {
         // loadingIndicator fields
         this.mediaFetched = false;
         this.currMediaImg = '../../../assets/img/transparent.svg';
@@ -65,6 +66,7 @@ export class ScoreboardComponent implements OnInit {
         this.userService.fetchUser()
             .then(() => this.userService.fetchLatestMedia())
             .then(() => {
+                this.titleService.setTitle('instire.io \u2014 Scoreboard for @' + this.userService.user.details.username);
                 this.mediaFetched = true;
                 if (this.userService.user.media.length > 0) {
                     this.currMediaImg = this.userService.user.media[0].src;

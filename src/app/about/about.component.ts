@@ -1,5 +1,6 @@
 import { Component, OnInit, OnDestroy } from '@angular/core';
-import {ActivatedRoute} from '@angular/router';
+import {ActivatedRoute, Router} from '@angular/router';
+import {Title} from '@angular/platform-browser';
 
 @Component({
   selector: 'app-about',
@@ -11,11 +12,18 @@ export class AboutComponent implements OnInit, OnDestroy {
     subroute: string;
     private sub: any;
 
-    constructor(private route: ActivatedRoute) { }
+    constructor(private router: Router, private route: ActivatedRoute, private titleService: Title) { }
 
     ngOnInit() {
         this.sub = this.route.params.subscribe(params => {
             this.subroute = params['subroute'];
+            switch (this.subroute) {
+                case 'wtf':     this.titleService.setTitle('instire.io \u2014 About'); break;
+                case 'faq':     this.titleService.setTitle('instire.io \u2014 FAQ'); break;
+                case 'legal':   this.titleService.setTitle('instire.io \u2014 Legal Information'); break;
+                case 'privacy': this.titleService.setTitle('instire.io \u2014 Privacy Policy'); break;
+                default: this.router.navigateByUrl('/404');
+            }
         });
     }
 

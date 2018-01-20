@@ -20,7 +20,7 @@ import { AboutComponent } from './about/about.component';
 const appRoutes: Routes = [
     {
         path: 'login',
-        component: LoginComponent
+        component: LoginComponent,
     },
     {
         path: 'scoreboard',
@@ -31,28 +31,6 @@ const appRoutes: Routes = [
         path: 'about/:subroute',
         component: AboutComponent
     },
-    /*
-    {
-        path: 'about',
-        component: AboutComponent,
-        data: { title: 'About'}
-    },
-    {
-        path: 'privacy',
-        component: PrivacyComponent,
-        data: { title: 'Privacy'}
-    },
-    {
-        path: 'imprint',
-        component: ImprintComponent,
-        data: { title: 'Imprint'}
-    },
-    {
-        path: 'frequently-asked-questions',
-        component: FAQComponent,
-        data: { title: 'FAQ'}
-    },
-    */
     {
         path: '',
         component: StartComponent,

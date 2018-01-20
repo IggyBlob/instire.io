@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {Title} from '@angular/platform-browser';
 
 @Component({
   selector: 'app-start',
@@ -7,9 +8,10 @@ import { Component, OnInit } from '@angular/core';
 })
 export class StartComponent implements OnInit {
 
-  constructor() { }
+    constructor(private titleService: Title) { }
 
-  ngOnInit() {
-  }
+    ngOnInit() {
+        this.titleService.setTitle('instire.io \u2014 Welcome');
+    }
 
 }
