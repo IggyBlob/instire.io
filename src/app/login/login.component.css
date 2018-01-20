@@ -1,5 +1,5 @@
 .container {
-    width: 350px;
+    max-width: 350px;
 }
 
 .button {
@@ -26,4 +26,24 @@ p.privacy-info {
 
 #logout-image {
     display: none;
+}
+
+/* Extra small devices */
+@media (max-width: 320px) {
+
+}
+
+/* Small devices */
+@media (max-width: 576px) {
+
+}
+
+/* Medium devices */
+@media (max-width: 768px) {
+
+}
+
+/* Large devices  */
+@media (max-width: 992px) {
+
 }
