@@ -35,6 +35,10 @@ app-root {
     flex-direction: column;
 }
 
+router-outlet {
+    display: none;
+}
+
 /*
 app-root > * {
     padding: 10px;

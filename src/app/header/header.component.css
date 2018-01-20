@@ -46,3 +46,43 @@ ul li a {
     font-size: 13px;
     min-width: 100px;
 }
+
+/* Extra small devices */
+@media (max-width: 320px) {
+    ul li a {
+        padding-right: 30px;
+    }
+}
+
+/* Small devices */
+@media (max-width: 576px) {
+    nav {
+        padding: 0px 20px 0px 20px;
+    }
+
+    div.logo {
+        width: 100%;
+        text-align: center;
+    }
+
+    ul {
+        width: 100%;
+        margin-top: 5px;
+    }
+}
+
+/* Medium devices */
+@media (max-width: 768px) {
+    span.conditional-display {
+        display: none;
+    }
+
+    ul li a, li.welcome-text {
+        padding-right: 30px;
+    }
+}
+
+/* Large devices  */
+@media (max-width: 992px) {
+
+}
