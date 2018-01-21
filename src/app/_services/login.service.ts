@@ -18,7 +18,7 @@ export class LoginService {
 
     public login(token: string) {
         // optionally run validateToken here to ensure that a valid token was passed from the API
-        // not really necessary since the AuthGuard is invoked upon routing to a secured area and will call validateToken the token anyway
+        // not really necessary since the AuthGuard is invoked upon routing to a secured area and will call validateToken anyway
         localStorage.setItem('token', token);
         this.loggedIn = true;
     }
