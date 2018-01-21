@@ -9,7 +9,7 @@ html {
 }
 
 body {
-    background-image: url("assets/img/background.jpg");
+    background-image: url("assets/img/background-slim.jpg");
     background-repeat: no-repeat;
     background-position: center center;
     -webkit-background-size: cover;
