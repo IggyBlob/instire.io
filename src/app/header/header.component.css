@@ -11,7 +11,7 @@ nav {
 
 div.logo {
     font-size: 45px;
-    color: #D8D8D8;
+    color: #ffffff;
     text-shadow: 2px 2px #000;
 }
 
@@ -23,10 +23,12 @@ ul {
 }
 
 ul li {
+    font-family: 'Open Sans', sans-serif;
     display: inline-block;
     font-weight: normal;
     font-size: 17px;
     color: #F57C17;
+    text-shadow: 1px 1px #000000;
 }
 
 li.welcome-text {

@@ -6,7 +6,7 @@
         <li *ngIf="!loginService.loggedIn"><a routerLink="/about/wtf" routerLinkActive="active">About</a></li>
         <li *ngIf="!loginService.loggedIn"><a routerLink="/about/faq" routerLinkActive="active">FAQ</a></li>
         <li *ngIf="loginService.loggedIn && userService.user.details" class="welcome-text">
-            What's up
+            What's up,
             {{ userService.user.details.full_name }}<span class="conditional-display">, nice to see you</span>!
         </li>
         <li *ngIf="!loginService.loggedIn">

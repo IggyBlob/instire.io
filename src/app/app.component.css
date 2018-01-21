@@ -16,7 +16,8 @@ footer {
     text-align: center;
     font-size: 11px;
     color: #D8D8D8;
-    padding :10px;
+    padding: 10px;
+    text-shadow: 1px 1px #000000;
 }
 
 footer a {

@@ -10,8 +10,8 @@ h1.logo {
 h2 {
     color: #F3F5F4;
     text-align: center;
-    letter-spacing: 3px;
-    text-shadow: 2px 2px #000;
+    letter-spacing: 1px;
+    text-shadow: 1px 1px #000;
     margin: -40px 0px 100px 0px;
 }
 
