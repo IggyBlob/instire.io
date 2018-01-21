@@ -1,7 +1,7 @@
 <div class="scoreCard" *ngIf="displayScoreCard" [@enterAnimation]>
     <img class="profile-picture" *ngIf="userService.user.details" [src]="userService.user.details.profile_picture" />
     <div class="username">
-        <h2>@{{ userService.user.details.username | uppercase }}</h2>
+        <h2>@{{ userService.user.details.username | lowercase }}</h2>
     </div>
     <div class="belt">
         <div class="tooltip">

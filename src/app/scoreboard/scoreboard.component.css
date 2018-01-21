@@ -12,6 +12,7 @@ img.loadingImage {
 h1.loadingMessage {
     color: #F3F5F4;
     font-size: 70px;
+    text-shadow: 1px 1px #000000;
 }
 
 /* scoreCard */
@@ -53,8 +54,8 @@ h2 {
 h1.score {
     font-size: 100px;
     color: #F57C17;
-    margin-top: -25px;
-    margin-bottom: -25px;
+    margin-top: -20px;
+    margin-bottom: -20px;
     text-shadow: 0 1px 0 #ccc,
         0 2px 0 #c9c9c9,
         0 3px 0 #bbb,
@@ -78,6 +79,7 @@ h1.score {
 .tooltip {
     position: relative;
     display: inline-block;
+    margin-right: 5px;
 }
 
 .tooltip .tooltip-text {
@@ -104,11 +106,76 @@ h1.score {
     opacity: 1;
 }
 
-.tooltip-arrow {
-    width: 0;
-    height: 0;
-    border-left: 20px solid transparent;
-    border-right: 20px solid transparent;
+/* Extra small devices */
+@media (max-width: 320px) {
 
-    border-top: 20px solid rgba(0, 0, 0, 0.8);;
+}
+
+/* Small devices */
+@media (max-width: 576px) {
+    img.loadingImage {
+        width: 150px;
+        height: 150px;
+        margin-bottom: 10px;
+    }
+
+    h1.loadingMessage {
+        font-size: 35px;
+    }
+
+    .belt {
+        padding: 10px;
+        font-size: 13px !important;
+    }
+
+    div.username h2 {
+        margin-top: 10px !important;
+        margin-bottom: 10px !important;
+    }
+
+    .metric-name {
+        text-transform: capitalize;
+    }
+
+    .results p {
+        font-size: 15px;
+    }
+
+    h1.score {
+        font-size: 70px;
+        margin-bottom: 5px;
+    }
+}
+
+/* Medium devices */
+@media (max-width: 768px) {
+    .belt {
+        text-align: justify-all;
+    }
+
+    img.profile-picture {
+        width: 100px;
+        border: 15px solid #F3F5F4;
+    }
+
+    div.username h2 {
+        font-size: 25px;
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+}
+
+/* Large devices  */
+@media (max-width: 992px) {
+    .belt {
+        font-size: smaller;
+    }
+
+    .belt .tooltip {
+        margin-right: 0px;
+    }
+
+    .belt .metric-name {
+        margin-left: 0px;
+    }
 }
