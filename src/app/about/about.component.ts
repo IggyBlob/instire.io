@@ -22,7 +22,7 @@ export class AboutComponent implements OnInit, OnDestroy {
                 case 'faq':     this.titleService.setTitle('instire.io \u2014 FAQ'); break;
                 case 'legal':   this.titleService.setTitle('instire.io \u2014 Legal Information'); break;
                 case 'privacy': this.titleService.setTitle('instire.io \u2014 Privacy Policy'); break;
-                default: this.router.navigateByUrl('/404');
+                default: this.router.navigateByUrl('/xyz');
             }
         });
     }

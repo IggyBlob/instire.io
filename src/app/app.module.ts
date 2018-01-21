@@ -16,6 +16,7 @@ import {UserService} from './_services/user.service';
 import {HTTP_INTERCEPTORS, HttpClientModule} from '@angular/common/http';
 import {LoginService} from './_services/login.service';
 import { AboutComponent } from './about/about.component';
+import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 
 const appRoutes: Routes = [
     {
@@ -36,12 +37,10 @@ const appRoutes: Routes = [
         component: StartComponent,
         pathMatch: 'full'
     },
-    /*
     {
         path: '**',
         component: PageNotFoundComponent
     }
-    */
 
 ];
 
@@ -52,7 +51,8 @@ const appRoutes: Routes = [
         ScoreboardComponent,
         HeaderComponent,
         LoginComponent,
-        AboutComponent
+        AboutComponent,
+        PageNotFoundComponent
     ],
     imports: [
         RouterModule.forRoot(

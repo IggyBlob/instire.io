@@ -1,0 +1,43 @@
+h1, h2 {
+    color: #F3F5F4;
+    text-align: center;
+    text-shadow: 1px 1px #000;
+}
+
+h1 {
+    font-size: 170px;
+    font-family: 'Pacifico', cursive;
+    text-shadow: 2px 2px #000;
+    margin-top: -60px;
+    margin-bottom: -40px;
+}
+
+a {
+    text-shadow: 1px 1px #fff;
+}
+
+/* Extra small devices */
+@media (max-width: 320px) {
+
+}
+
+/* Small devices */
+@media (max-width: 576px) {
+    h2 {
+        font-size: 20px;
+    }
+
+    h1 {
+        font-size: 140px;
+    }
+}
+
+/* Medium devices */
+@media (max-width: 768px) {
+
+}
+
+/* Large devices  */
+@media (max-width: 992px) {
+
+}
