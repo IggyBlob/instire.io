@@ -7,8 +7,8 @@ You are currently inspecting the frontend / project landing page repository. For
 
 ## Setup
 Angular requires [Node.js](https://nodejs.org/en/), so please download and install the appropriate runtime and npm for 
-your system. Conveniently, Node.js and npm are distributed via package managers for most operating systems. Please refer
-to [Installing Node.js via package manager](hhttps://nodejs.org/en/download/package-manager/) for more details.
+your system. Conveniently, Node.js and npm are distributed via package managers for most operating systems, so please 
+refer to [Installing Node.js via package manager](https://nodejs.org/en/download/package-manager/) for more details.
 
 The [Angular CLI](https://cli.angular.io), a command-line interface that eases Angular development, itself is 
 distributed via npm and therefore no rocket science to install:
