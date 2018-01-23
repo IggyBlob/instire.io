@@ -6,7 +6,7 @@ _instire.io_ allows Instagram users to get a simple, yet powerful insight on the
 You are currently inspecting the frontend / project landing page repository. For details on the backend service, please refer to the [instire.io-server repository](https://github.com/IggyBlob/instire.io-server).
 
 ## Live Preview
-A live version of instire.io can be found at (http://instire.io.paulhaunschmied.com). 
+A live version of instire.io can be found at http://instire.io.paulhaunschmied.com. 
 
 _Please note that instire.io is currently stuck in Instagram's review process, which every app has to pass before
 being able to use the Instagram API in production. This means that instire.io is running in a sandbox API environment 
@@ -65,4 +65,4 @@ optimized production app that now can be deployed to AWS S3, Azure or your plain
 ## Third-party libraries
 instire.io uses numerous libraries developed by external developers as well as content that has been produced by third 
 parties who may not necessarily share the opinions expressed on instire.io. Please find a list of these authors at
-(http://instire.io.paulhaunschmied.com/about/legal).
+http://instire.io.paulhaunschmied.com/about/legal.

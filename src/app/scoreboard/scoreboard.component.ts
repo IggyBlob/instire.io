@@ -94,8 +94,8 @@ export class ScoreboardComponent implements OnInit {
         switch (this.imageCounter) {
             case 0: this.currMessage = 'Crunching data ...'; break;
             case 2: this.currMessage = 'Checking out your vacay pics ...'; break;
-            case 4: this.currMessage = 'Liking your GF\'s Instagram post ...'; break;
-            case 6: this.currMessage = 'Deleting all your hidden porn ...'; break;
+            case 4: this.currMessage = 'Solving climate change ...'; break;
+            case 6: this.currMessage = 'Dividing by zero ...'; break;
             case 8:
                 if (this.scoreFetched) { this.displayScoreCard = true; this.animateCountUp(); return; }
                 this.imageCounter--;
