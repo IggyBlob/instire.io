@@ -5,6 +5,14 @@ _instire.io_ allows Instagram users to get a simple, yet powerful insight on the
 
 You are currently inspecting the frontend / project landing page repository. For details on the backend service, please refer to the [instire.io-server repository](https://github.com/IggyBlob/instire.io-server).
 
+## Live Preview
+A live version of instire.io can be found at (http://instire.io.paulhaunschmied.com). 
+
+_Please note that instire.io is currently stuck in Instagram's review process, which every app has to pass before
+being able to use the Instagram API in production. This means that instire.io is running in a sandbox API environment 
+that can only be used by registered users at the moment. If you'd like to use instire.io with your personal Instagram 
+account, please send me an e-mail to [inbox@paulhaunschmied.com](mailto:inbox@paulhaunschmied.com)._
+
 ## Setup
 Angular requires [Node.js](https://nodejs.org/en/), so please download and install the appropriate runtime and npm for 
 your system. Conveniently, Node.js and npm are distributed via package managers for most operating systems, so please 
@@ -53,3 +61,8 @@ fields, which yields smaller loading times._
 
 After the command has finished, you'll find a newly generated directory `dist` in your project root, which holds the 
 optimized production app that now can be deployed to AWS S3, Azure or your plain old FTP server.  
+
+## Third-party libraries
+instire.io uses numerous libraries developed by external developers as well as content that has been produced by third 
+parties who may not necessarily share the opinions expressed on instire.io. Please find a list of these authors at
+(http://instire.io.paulhaunschmied.com/about/legal).
