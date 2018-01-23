@@ -51,7 +51,6 @@ export class UserService {
                 .toPromise()
                 .then(
                     res => {
-                        console.log(res.raw);
                         this.user.metrics.raw = res.raw;
                         this.user.metrics.compiled = res.compiled;
                         resolve();

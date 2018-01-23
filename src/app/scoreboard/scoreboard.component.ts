@@ -105,7 +105,6 @@ export class ScoreboardComponent implements OnInit {
             this.currMediaImg = this.userService.user.media[this.currMediaIdx].src;
         } else {
             this.currMediaImg = '../../../assets/img/transparent.svg';
-            console.log(this.imageCounter);
         }
 
         this.stateChange = '' + this.currMediaIdx; // keep firing state changes so that the image wheel keeps spinning
