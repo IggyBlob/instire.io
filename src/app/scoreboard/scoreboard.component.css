@@ -163,6 +163,14 @@ h1.score {
         margin-top: 20px;
         margin-bottom: 20px;
     }
+
+    .belt .tooltip {
+        margin-right: 5px !important;
+    }
+
+    .belt .metric-name {
+        margin-left: 5px !important;
+    }
 }
 
 /* Large devices  */
