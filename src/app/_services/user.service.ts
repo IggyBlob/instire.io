@@ -5,7 +5,7 @@ import { AverageData, User, UserData, UserMediaData, UserMetricsData } from '../
 @Injectable()
 export class UserService {
 
-    apiUrl = 'http://api.radiochecker.com:3000/api';
+    apiUrl = 'http://<API HOST>:3000/api';
     user: User;
     averageScore: number;
     overallUserCount: number;

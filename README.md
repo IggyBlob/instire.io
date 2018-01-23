@@ -27,6 +27,10 @@ Fetch the project's dependencies
 
 ```npm install```
 
+Open the files `src/app/_services/login.service.ts` and `src/app/_services/user.service.ts` in your favourite editor and
+replace the `<API HOST>` placeholder with a valid FQDN or IP address that points to the instire.io API server. Make sure
+the API server is up and running before starting up the frontend.
+
 ### Running in Development Mode (Local)
 Running the instire.io frontend on your local machine is quite easy, thanks to the Angular CLI:
 

@@ -13,7 +13,7 @@ export class LoginService {
         // dead simple POJS redirect ;)
         window.location.href = 'https://api.instagram.com/oauth/authorize/?client_id='
             + '036b5eb66e74476e9e2cf0617b7f113e' + '&redirect_uri='
-            + 'http://api.radiochecker.com:3000/api/auth' + '&response_type=code';
+            + 'http://<API HOST>:3000/api/auth' + '&response_type=code';
     }
 
     public login(token: string) {
